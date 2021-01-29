@@ -5,7 +5,7 @@
 
 *Важно!*
 в редакторе скриптов файл params должен быть первее файла main
-![](/templates/base_with_params/_images/files_order.png | width=100)
+![](/templates/base_with_params/_images/files_order.png)
 
 
 
