@@ -1,5 +1,5 @@
 # Базовый шаблон
-Добавлен основной скрипт https://github.com/Ryadnov/zm2gspread/blob/main/main.gs
+Добавлен основной скрипт [main.gs](/main.gs)
 
 Есть лист (Settings) на котором вводится token
 
