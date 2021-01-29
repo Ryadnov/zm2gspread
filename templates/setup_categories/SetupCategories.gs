@@ -1,6 +1,6 @@
 /**
- * main.gs v1.0
  * Latest version available at https://github.com/Ryadnov/zm2gspread/blob/main/templates/setup_categories/SetupCategories.gs
+ * @version v1.0
  *
  * @info https://github.com/zenmoney/ZenPlugins/wiki/ZenMoney-API#tag
  */

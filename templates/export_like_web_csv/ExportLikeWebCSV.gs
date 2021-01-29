@@ -1,6 +1,6 @@
 /**
- * main.gs v1.0
  * Latest version available at https://github.com/Ryadnov/zm2gspread/blob/main/templates/export_like_web_csv/ExportLikeWebCSV.gs
+ * @version v1.0
  */
 
 const ExportLikeWebCSV = (function () {
