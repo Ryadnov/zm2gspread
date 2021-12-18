@@ -1,6 +1,6 @@
 /**
  * Latest version available at https://github.com/Ryadnov/zm2gspread/blob/main/templates/export_like_web_csv/ExportLikeWebCSV.gs
- * @version v1.0
+ * @version v1.1
  */
 
 const ExportLikeWebCSV = (function () {
@@ -75,8 +75,9 @@ const ExportLikeWebCSV = (function () {
     }
   }
 
-  gsMenu.addItem("Sync export", 'ExportLikeWebCSV.DoSyncExport');
-
+  if (gsMenu != null) {
+    gsMenu.addItem("Sync export", 'ExportLikeWebCSV.DoSyncExport');
+  }
   fullSyncHandlers.push(prepareData);
 
   const o = {};

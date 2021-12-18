@@ -1,6 +1,6 @@
 /**
  * Latest version available at https://github.com/Ryadnov/zm2gspread/blob/main/templates/all_data/ZM_Transaction.gs
- * @version v1.0
+ * @version v1.1
  *
  * @info https://github.com/zenmoney/ZenPlugins/wiki/ZenMoney-API#transaction
  */
@@ -39,6 +39,7 @@ fullSyncHandlers.push(json => {
       e['incomeBankID'],
       e['outcomeBankID'],
       e['latitude'],
+      e['longitude'],
       e['required'],
       e['qrCode'],
     ]));

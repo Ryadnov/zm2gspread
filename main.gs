@@ -1,17 +1,23 @@
 /**
  * Latest version available at https://github.com/Ryadnov/zm2gspread/blob/main/main.gs
- * @version v1.0
+ * @version v1.1
  */
 
 const fullSyncHandlers = [];
 
-const gsMenu = SpreadsheetApp.getUi()
-  .createMenu((typeof paramMenuTitleMain !== 'undefined') ? paramMenuTitleMain : 'Zenmoney')
-  .addItem((typeof paramMenuTitleFullSync !== 'undefined') ? paramMenuTitleFullSync : 'Full sync', 'doFullSync')
-  .addSeparator();
+let gsMenu = null;
+try {
+  gsMenu = SpreadsheetApp.getUi()
+    .createMenu((typeof paramMenuTitleMain !== 'undefined') ? paramMenuTitleMain : 'Zenmoney')
+    .addItem((typeof paramMenuTitleFullSync !== 'undefined') ? paramMenuTitleFullSync : 'Full sync', 'doFullSync')
+    .addSeparator();
+} catch (error) {
+}
 
 function onOpen() {
-  gsMenu.addToUi();
+  if (gsMenu != null) {
+    gsMenu.addToUi();
+  }
 }
 
 function doFullSync() {
@@ -95,7 +101,7 @@ const zmData = (function (p) {
 
   o.RequestData = function () {
     const ts = currentTimestamp();
-    var json = o.Request({
+    const json = o.Request({
       'currentClientTimestamp': ts,
       'serverTimestamp': 0,
     });
@@ -105,7 +111,7 @@ const zmData = (function (p) {
 
   o.RequestForceFetch = function (items) {
     const ts = currentTimestamp();
-    var json = o.Request({
+    const json = o.Request({
       'currentClientTimestamp': ts,
       'serverTimestamp': ts,
       'forceFetch': items,
